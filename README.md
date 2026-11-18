@@ -39,10 +39,9 @@ Contraseña:
 
 ### Inicio de Sesión
 
-![Login](imagenes/login.png)
 Permite acceder al sistema mediante autenticación de usuario.
 
-imagenes/login.png
+![Login](imagenes/login.png)
 
 ---
 
