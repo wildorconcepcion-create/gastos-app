@@ -2,9 +2,9 @@
 
 ## Descripción
 
-Aplicación web desarrollada con Python, Flask y SQLite que permite registrar gastos personales y generar reportes.
+Aplicación web desarrollada con Python, Flask y SQLite que permite registrar, consultar y editar gastos personales.
 
-El sistema incluye autenticación, almacenamiento en base de datos SQLite, edición de gastos y auditoría de acciones realizadas por los usuarios.
+El sistema incorpora autenticación mediante credenciales predefinidas, almacenamiento persistente utilizando SQLite y un módulo de auditoría que registra las acciones realizadas por los usuarios dentro de la aplicación.
 
 ---
 
@@ -39,65 +39,75 @@ Contraseña:
 
 ### Inicio de Sesión
 
-Permite acceder al sistema mediante autenticación de usuario.
+Permite acceder al sistema mediante autenticación de usuario utilizando credenciales previamente configuradas.
 
-imagenes/login.png
+![Login](imagenes/login.PNG)
 
 ---
 
 ### Dashboard
 
-Visualiza:
+Pantalla principal del sistema donde se muestran indicadores generales y accesos rápidos a las funcionalidades disponibles.
+
+Características:
 
 - Total de gastos registrados.
 - Monto total acumulado.
-- Accesos directos a las funcionalidades.
+- Acceso al registro de gastos.
+- Acceso al reporte.
+- Acceso a la auditoría.
 
-imagenes/dashboard.png
+![Dashboard](imagenes/dashboard.png)
 
 ---
 
 ### Registro de Gastos
 
-Permite registrar:
+Permite registrar nuevos gastos indicando:
 
 - Fecha
 - Descripción
 - Monto
 
-imagenes/nuevo_gasto.png
+Toda la información es almacenada en una base de datos SQLite.
+
+![Registro de Gastos](imagenes/nuevo_gasto.png)
 
 ---
 
 ### Reporte de Gastos
 
-Permite consultar todos los gastos registrados y visualizar el total acumulado.
+Permite consultar todos los gastos registrados en el sistema y visualizar el monto total acumulado.
 
-imagenes/reporte.png
+![Reporte](imagenes/reporte.png)
 
 ---
 
 ### Edición de Gastos
 
-Permite actualizar la información de gastos previamente registrados.
+Permite modificar información previamente registrada cuando existan errores o actualizaciones en los datos.
+
+![Edición de Gastos](imagenes/editar_gasto.png)
 
 ---
 
 ### Auditoría
 
-Registra todas las acciones realizadas por el usuario:
+Permite visualizar las acciones realizadas por los usuarios dentro del sistema.
+
+Cada registro almacena:
+
+- Fecha y hora.
+- Usuario.
+- Acción realizada.
+- Detalle de la operación.
+
+Acciones auditadas:
 
 - Registro de gastos.
 - Edición de gastos.
 
-Cada acción almacena:
-
-- Fecha y hora.
-- Usuario.
-- Acción ejecutada.
-- Detalle.
-
-imagenes/auditoria.png
+![Auditoría](imagenes/auditoria.png)
 
 ---
 
@@ -120,6 +130,12 @@ gastos_app/
 │   └── auditoria.html
 │
 ├── imagenes/
+│   ├── login.png
+│   ├── dashboard.png
+│   ├── nuevo_gasto.png
+│   ├── editar_gasto.png
+│   ├── reporte.png
+│   └── auditoria.png
 │
 └── instance/
 ```
@@ -128,37 +144,39 @@ gastos_app/
 
 ## Instalación
 
-Clonar repositorio:
+### Clonar repositorio
 
 ```bash
 git clone https://github.com/wildorconcepcion-create/gastos-app.git
 ```
 
-Ingresar al proyecto:
+### Ingresar al proyecto
 
 ```bash
 cd gastos_app
 ```
 
-Crear entorno virtual:
+### Crear entorno virtual
 
 ```bash
 python -m venv .venv
 ```
 
-Activar entorno virtual:
+### Activar entorno virtual
+
+Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Instalar dependencias:
+### Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ejecutar aplicación:
+### Ejecutar aplicación
 
 ```bash
 python app.py
@@ -171,9 +189,9 @@ python app.py
 1. Iniciar sesión con las credenciales proporcionadas.
 2. Acceder al Dashboard principal.
 3. Registrar gastos indicando fecha, descripción y monto.
-4. Consultar el reporte de gastos.
-5. Editar gastos registrados.
-6. Revisar la auditoría para visualizar las acciones realizadas dentro del sistema.
+4. Consultar el reporte general de gastos.
+5. Editar registros cuando sea necesario.
+6. Revisar el historial de auditoría para visualizar las acciones realizadas.
 
 ---
 
