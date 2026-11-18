@@ -41,7 +41,7 @@ Contraseña:
 
 Permite acceder al sistema mediante autenticación de usuario utilizando credenciales previamente configuradas.
 
-![Login](imagenes/login.png)
+![Login](imagenes/login.PNG)
 
 ---
 
