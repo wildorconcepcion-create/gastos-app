@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h2>Dashboard</h2>
+
+
+<hr>
+
+<div class="row">
+
+    <!-- Total de gastos -->
+    <div class="col-md-6">
+
+        <div class="card text-white bg-primary shadow">
+
+            <div class="card-body">
+
+                <h5>Total de Gastos Registrados</h5>
+
+                <h2>
+                    {{ total_gastos }}
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Monto acumulado -->
+    <div class="col-md-6">
+
+        <div class="card text-white bg-success shadow">
+
+            <div class="card-body">
+
+                <h5>Total Acumulado</h5>
+
+                <h2>
+                    S/ {{ "%.2f"|format(suma_total) }}
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<!-- Menú principal -->
+
+<a
+    href="/nuevo"
+    class="btn btn-primary">
+
+    Registrar Gasto
+
+</a>
+
+<a
+    href="/reporte"
+    class="btn btn-success">
+
+    Ver Reporte
+
+</a>
+
+<a
+    href="/auditoria"
+    class="btn btn-warning">
+
+    Auditoría
+
+</a>
+
+
+<a
+    href="/logout"
+    class="btn btn-danger">
+
+    Cerrar Sesión
+
+</a>
+
+
+
+
+{% endblock %}
